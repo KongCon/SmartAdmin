@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Smart.Portal.Filter
+namespace SmartPortal.Filter
 {
     /// <summary>
     /// 默认用户访问授权验证过滤器

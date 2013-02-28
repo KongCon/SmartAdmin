@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Smart.Portal.Models.Custom
+namespace SmartPortal.Models.Custom
 {
     /// <summary>
     /// 快捷菜单模型

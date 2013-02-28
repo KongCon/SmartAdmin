@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using System.Drawing;
 
 
-namespace Smart.Portal.Areas.Controllers
+namespace SmartPortal.Areas.Controllers
 {
     /// <summary>
     /// 系统设置
@@ -117,7 +116,7 @@ namespace Smart.Portal.Areas.Controllers
         public void VerificationCode()
         {
             //构造验证码图片
-            Smart.Utility.ValidateCode validateCode = new Utility.ValidateCode();
+            Smart.Utility.ValidateCode validateCode = new Smart.Utility.ValidateCode();
             validateCode.Border = true;
             validateCode.BorderColor = Color.Red;
             validateCode.BorderWidth = 1;

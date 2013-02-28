@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Smart.Portal.Models
+namespace SmartPortal.Models
 {
     /// <summary>
     /// 开放平台接口实体

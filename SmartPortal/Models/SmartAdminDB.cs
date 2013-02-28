@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace Smart.Portal.Models
+namespace SmartPortal.Models
 {
     /// <summary>
     /// SmartAdmin管理平台数据库

@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Smart.Portal.Models
+namespace SmartPortal.Models
 {
     /// <summary>
     /// 系统更新维护信息实体

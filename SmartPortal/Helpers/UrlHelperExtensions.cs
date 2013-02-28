@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Smart.Portal.Helpers
+namespace SmartPortal.Helpers
 {
     /// <summary>
     /// UrlHelper扩展

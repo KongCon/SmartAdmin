@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace Smart.Portal.Models
+namespace SmartPortal.Models
 {
     /// <summary>
     /// 初始化数据

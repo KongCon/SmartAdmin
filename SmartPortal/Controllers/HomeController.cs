@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Webdiyer.WebControls.Mvc;
-using Smart.Portal.Models;
+using SmartPortal.Models;
 
-namespace Smart.Portal.Controllers
+namespace SmartPortal.Controllers
 {
     public class HomeController : Controller
     {
@@ -40,7 +40,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Models.Products> Products = data.ToPagedList(id, 10);
+            PagedList<Products> Products = data.ToPagedList(id, 10);
 
             return View(Products);
         }
@@ -69,7 +69,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Models.Article> article = data.ToPagedList(id, 20);
+            PagedList<Article> article = data.ToPagedList(id, 20);
 
             return View(article);
         }
@@ -98,7 +98,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Models.Article> article = data.ToPagedList(id, 20);
+            PagedList<Article> article = data.ToPagedList(id, 20);
 
             return View(article);
         }

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 
-namespace Smart.Portal.Areas.Controllers
+namespace SmartPortal.Areas.Controllers
 {
     /// <summary>
     /// 门户基础模块:文章类目管理
