@@ -49,12 +49,10 @@
       <HintPath>..\SmartAdmin\bin\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Smart.Security">
-      <HintPath>..\..\SmartSecurity\bin\Debug\Smart.Security.dll</HintPath>
-    </Reference>
     <Reference Include="Smart.Utility">
       <HintPath>..\SmartAdmin\bin\Smart.Utility.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -78,13 +76,130 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Admin\Controllers\AnalysisController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleCatController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AttachmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BackupController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ConfigurationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExceptionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InterfaceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LeaveMessageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LinkController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoggerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PictureController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SecurityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SystemController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UpdateController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filter\DefaultAuthorizationFilter.cs" />
+    <Compile Include="Filter\DefaultExceptionFilter.cs" />
+    <Compile Include="Filter\DefaultLoggerActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\UrlHelperExtensions.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticleCat.cs" />
+    <Compile Include="Models\Backup.cs" />
+    <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\Custom\QuickMenu.cs" />
+    <Compile Include="Models\Custom\Tips.cs" />
+    <Compile Include="Models\InitData.cs" />
+    <Compile Include="Models\Interface.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\ProductsCat.cs" />
+    <Compile Include="Models\Security.cs" />
+    <Compile Include="Models\SmartAdminDB.cs" />
+    <Compile Include="Models\System.cs" />
+    <Compile Include="Models\Update.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Content\css\custom.css" />
+    <Content Include="Content\Content\css\style.css" />
+    <Content Include="Content\Content\img\accept.png" />
+    <Content Include="Content\Content\img\add.png" />
+    <Content Include="Content\Content\img\arrows-ffffff.png" />
+    <Content Include="Content\Content\img\book.png" />
+    <Content Include="Content\Content\img\btn-overlay.png" />
+    <Content Include="Content\Content\img\cancel.png" />
+    <Content Include="Content\Content\img\datatable\back_disabled.png" />
+    <Content Include="Content\Content\img\datatable\back_enabled.png" />
+    <Content Include="Content\Content\img\datatable\forward_disabled.png" />
+    <Content Include="Content\Content\img\datatable\forward_enabled.png" />
+    <Content Include="Content\Content\img\datatable\sort_asc.png" />
+    <Content Include="Content\Content\img\datatable\sort_asc_disabled.png" />
+    <Content Include="Content\Content\img\datatable\sort_both.png" />
+    <Content Include="Content\Content\img\datatable\sort_desc.png" />
+    <Content Include="Content\Content\img\datatable\sort_desc_disabled.png" />
+    <Content Include="Content\Content\img\delete.png" />
+    <Content Include="Content\Content\img\error.png" />
+    <Content Include="Content\Content\img\exclamation.png" />
+    <Content Include="Content\Content\img\favicons\apple.png" />
+    <Content Include="Content\Content\img\favicons\favicon.png" />
+    <Content Include="Content\Content\img\gallery\book01.jpg" />
+    <Content Include="Content\Content\img\gallery\card01.jpg" />
+    <Content Include="Content\Content\img\gallery\leaflet01.jpg" />
+    <Content Include="Content\Content\img\help.png" />
+    <Content Include="Content\Content\img\ie-notice.png" />
+    <Content Include="Content\Content\img\information.png" />
+    <Content Include="Content\Content\img\jquery.wysiwyg.gif" />
+    <Content Include="Content\Content\img\key.png" />
+    <Content Include="Content\Content\img\logo.png" />
+    <Content Include="Content\Content\img\nyro\ajaxLoader.gif" />
+    <Content Include="Content\Content\img\nyro\close.gif" />
+    <Content Include="Content\Content\img\nyro\next.gif" />
+    <Content Include="Content\Content\img\nyro\prev.gif" />
+    <Content Include="Content\Content\img\page_save.png" />
+    <Content Include="Content\Content\img\page_white_go.png" />
+    <Content Include="Content\Content\img\preview-not-available.gif" />
+    <Content Include="Content\Content\img\quote.png" />
+    <Content Include="Content\Content\img\search.gif" />
+    <Content Include="Content\Content\img\shadow.png" />
+    <Content Include="Content\Content\img\style.png" />
+    <Content Include="Content\Content\img\tag-bg.gif" />
+    <Content Include="Content\Content\img\toggle-small-expand.png" />
+    <Content Include="Content\Content\img\toggle.gif" />
+    <Content Include="Content\Content\img\user_32.png" />
+    <Content Include="Content\Content\img\valid.gif" />
+    <Content Include="Content\Content\js\administry.js" />
+    <Content Include="Content\Content\js\flot\jquery.flot.min.js" />
+    <Content Include="Content\Content\js\flot\jquery.flot.selection.min.js" />
+    <Content Include="Content\Content\js\jquery-1.4.2.min.js" />
+    <Content Include="Content\Content\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Content\js\jquery.nyroModal.pack.js" />
+    <Content Include="Content\Content\js\jquery.sparkline.min.js" />
+    <Content Include="Content\Content\js\jquery.superfish.min.js" />
+    <Content Include="Content\Content\js\jquery.supersubs.min.js" />
+    <Content Include="Content\Content\js\jquery.tagInput.min.js" />
+    <Content Include="Content\Content\js\jquery.tipTip.min.js" />
+    <Content Include="Content\Content\js\jquery.ui.core.min.js" />
+    <Content Include="Content\Content\js\jquery.ui.tabs.min.js" />
+    <Content Include="Content\Content\js\jquery.ui.widget.min.js" />
+    <Content Include="Content\Content\js\jquery.validate_pack.js" />
+    <Content Include="Content\Content\js\jquery.wysiwyg.min.js" />
+    <Content Include="Content\Content\js\swfobject.js" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Content\themes\base\jquery-ui.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\icon\favicon.ico" />
     <Content Include="Content\images\banner.jpg" />
@@ -119,16 +234,55 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Analysis\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Article\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Article\Alert.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Article\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Article\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\ArticleCat\_QuickMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\ArticleCat\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\ArticleCat\Alert.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\ArticleCat\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\ArticleCat\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Attachment\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Backup\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Configuration\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Contact\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Exception\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Interface\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\LeaveMessage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Link\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Logger\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Picture\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Security\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\_ReferenceHead.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\_UserInfo.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\Custom\QuickMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Shared\Custom\Tips.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\System\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\System\Install.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\System\InstallDataBase.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\System\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\System\NoThanks.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Update\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\User\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\User\Alert.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\User\Del.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\User\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Views\Web.config" />
     <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <Content Include="Views\Shared\_CopyRight.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
@@ -160,10 +314,6 @@
     <ProjectReference Include="..\MvcPager\MvcPager.csproj">
       <Project>{4BA9F10C-67B7-4CD6-87B1-0519ADBCA2A1}</Project>
       <Name>MvcPager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SmartAdmin\SmartAdmin.csproj">
-      <Project>{D6E561E0-04BF-4147-9D6B-0FFE768104BE}</Project>
-      <Name>SmartAdmin</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

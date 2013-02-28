@@ -81,8 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminAreaRegistration.cs" />
-    <Compile Include="Controllers\AnalysisController.cs" />
-    <Compile Include="Controllers\ArticleCatController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\AttachmentController.cs" />
     <Compile Include="Controllers\BackupController.cs" />
@@ -106,23 +104,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\UrlHelperExtensions.cs" />
-    <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\ArticleCat.cs" />
-    <Compile Include="Models\Backup.cs" />
-    <Compile Include="Models\Configuration.cs" />
-    <Compile Include="Models\Custom\QuickMenu.cs" />
-    <Compile Include="Models\Custom\Tips.cs" />
-    <Compile Include="Models\InitData.cs" />
-    <Compile Include="Models\Interface.cs" />
-    <Compile Include="Models\Logger.cs" />
-    <Compile Include="Models\Menu.cs" />
-    <Compile Include="Models\Products.cs" />
-    <Compile Include="Models\ProductsCat.cs" />
-    <Compile Include="Models\Security.cs" />
-    <Compile Include="Models\SmartAdminDB.cs" />
-    <Compile Include="Models\System.cs" />
-    <Compile Include="Models\Update.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

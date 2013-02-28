@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using System.Configuration;
 
 namespace Smart.Portal
 {
@@ -29,7 +31,13 @@ namespace Smart.Portal
         }
 
         protected void Application_Start()
-        {            
+        {
+            //模型更改时修改数据库
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Models.SmartAdminDB>());
+
+            //初始化数据
+            Database.SetInitializer(new Models.InitData());
+
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

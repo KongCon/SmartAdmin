@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Smart.Admin.Models;
 using Webdiyer.WebControls.Mvc;
+using Smart.Portal.Models;
 
 namespace Smart.Portal.Controllers
 {
@@ -40,7 +40,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Admin.Models.Products> Products = data.ToPagedList(id, 10);
+            PagedList<Models.Products> Products = data.ToPagedList(id, 10);
 
             return View(Products);
         }
@@ -69,7 +69,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Admin.Models.Article> article = data.ToPagedList(id, 20);
+            PagedList<Models.Article> article = data.ToPagedList(id, 20);
 
             return View(article);
         }
@@ -98,7 +98,7 @@ namespace Smart.Portal.Controllers
                        orderby m.PublishTime descending
                        select m;
 
-            PagedList<Admin.Models.Article> article = data.ToPagedList(id, 20);
+            PagedList<Models.Article> article = data.ToPagedList(id, 20);
 
             return View(article);
         }
