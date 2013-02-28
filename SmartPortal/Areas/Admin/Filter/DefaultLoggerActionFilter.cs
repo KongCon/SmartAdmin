@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SmartPortal.Filter
+namespace SmartPortal.Areas.Admin.Filter
 {
     /// <summary>
     /// 默认日志记录器过滤器类

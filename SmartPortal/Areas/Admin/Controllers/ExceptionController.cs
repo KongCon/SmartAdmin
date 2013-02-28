@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SmartPortal.Areas.Controllers
+namespace SmartPortal.Areas.Admin.Controllers
 {
     /// <summary>
     /// 默认异常处理控制器

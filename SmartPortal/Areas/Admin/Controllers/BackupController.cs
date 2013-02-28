@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SmartPortal.Areas.Controllers
+namespace SmartPortal.Areas.Admin.Controllers
 {
     /// <summary>
     /// 备份恢复

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SmartPortal.Filter
+namespace SmartPortal.Areas.Admin.Filter
 {
     /// <summary>
     /// 默认用户访问授权验证过滤器
@@ -39,7 +39,7 @@ namespace SmartPortal.Filter
             {
                 //无权限访问
                 filterContext.HttpContext.Response.StatusCode = 401;
-                filterContext.Result = new RedirectResult("~/System/Login", false);
+                filterContext.Result = new RedirectResult("~/Admin/System/Login", false);
             }
             else
             {

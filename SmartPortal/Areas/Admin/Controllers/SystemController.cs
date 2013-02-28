@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Drawing;
 
 
-namespace SmartPortal.Areas.Controllers
+namespace SmartPortal.Areas.Admin.Controllers
 {
     /// <summary>
     /// 系统设置
@@ -55,7 +55,7 @@ namespace SmartPortal.Areas.Controllers
             {
                 //校验失败,返回登录页面
                 ViewBag.Message = "验证码错误。";
-                return View("~/Views/System/Login.cshtml");
+                return View("~/Areas/Admin/Views/System/Login.cshtml");
             }
 
             //校验用户名和密码
@@ -67,7 +67,7 @@ namespace SmartPortal.Areas.Controllers
             if (data.Count<Models.User>() <= 0)
             {
                 ViewBag.Message = "用户名或密码错误，请重新登录";
-                return View("~/Views/System/Login.cshtml");
+                return View("~/Areas/Admin/Views/System/Login.cshtml");
             }
 
             //一周内免登陆设置
@@ -105,7 +105,7 @@ namespace SmartPortal.Areas.Controllers
         {
             Response.Cookies.Add(new HttpCookie("username", ""));
 
-            return new RedirectResult("~/System/Login", false);
+            return new RedirectResult("~/Admin/System/Login", false);
         }
 
         /// <summary>

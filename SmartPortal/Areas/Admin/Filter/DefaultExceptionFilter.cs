@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SmartPortal.Filter
+namespace SmartPortal.Areas.Admin.Filter
 {
     /// <summary>
     /// 默认异常处理过滤器

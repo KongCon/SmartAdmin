@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 using System.Data;
 
-namespace SmartPortal.Areas.Controllers
+namespace SmartPortal.Areas.Admin.Controllers
 {
     
     /// <summary>
