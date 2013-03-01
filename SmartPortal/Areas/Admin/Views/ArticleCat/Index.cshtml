@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Models.ArticleCat>
+﻿@model IEnumerable<SmartPortal.Models.ArticleCat>
 @{
     ViewBag.Title = "类目管理";
 }
@@ -36,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (Models.ArticleCat entity in Model)
+                    @foreach (SmartPortal.Models.ArticleCat entity in Model)
                     {
                         <tr>
                             <td>@entity.Name</td>

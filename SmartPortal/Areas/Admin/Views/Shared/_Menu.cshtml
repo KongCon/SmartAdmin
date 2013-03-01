@@ -36,7 +36,7 @@
         <li @if (url.Contains("~/Admin/System/") || url.Contains("~/Admin/Configuration/") || url.Contains("~/Admin/Backup/") || url.Contains("~/Admin/Logger/") ||
                 url.Contains("~/Admin/Analysis/") || url.Contains("~/Admin/Security/") || url.Contains("~/Admin/Update/") || url.Contains("~/Admin/Interface/") || url.Contains("~/Admin/User/"))
             { @Html.Raw(className);
-            }><a href="@Url.Content("~/System/Index")">系统管理</a>
+            }><a href="@Url.Content("~/Admin/System/Index")">系统管理</a>
             <ul>
                 <li><a href="@Url.Content("~/Admin/Configuration/Index")">网站设置</a></li>
                 <li><a href="@Url.Content("~/Admin/Backup/Index")">备份恢复</a></li>
